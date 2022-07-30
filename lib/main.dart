@@ -15,8 +15,9 @@ class MyApp extends StatelessWidget{
         title: Text(mesaj),
       ),
       body: Center(
-        child: RaisedButton(
-          child: Text("Sonucu Gör"),
+        child: ElevatedButton(
+          // RaisedButton yerine elevatedButton kullanılıyor.
+          child: const Text("Sonucu Gör"),
           onPressed: (){
             int puan = 75;
             mesaj = "";
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget{
               mesaj ="Kaldı.";
             }
             var alert = AlertDialog(
-              title: Text("Sınav sonucu"),
+              title: const Text("Sınav sonucu"),
               content: Text(mesaj),
             );
             showDialog(context: context, builder: (BuildContext context)=>alert);
